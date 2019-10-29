@@ -1,0 +1,71 @@
+
+
+###install spatie/laravel-permission
+
+https://docs.spatie.be/laravel-permission/v3/installation-laravel/
+
+
+###run seed
+
+RolesAndPermissionsSeeder.php
+
+
+###add midelware
+
+app/Http/Kernel.php
+
+protected $routeMiddleware = [
+    // ...
+    'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
+    'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+    'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
+];
+
+protected $middlewareGroups = [
+    'web' => [
+        ....
+    ],
+
+    'admin' => [
+        'web',
+        'auth',
+        'role:admin'
+    ],
+
+    'api' => [
+        ...
+    ],
+];
+
+
+###add route
+
+app\Providers\RouteServiceProvider
+
+public function map()
+{
+    $this->mapApiRoutes();
+
+    $this->mapWebRoutes();
+    
+    $this->mapAdminRoutes();
+
+    //
+}
+
+
+protected function mapAdminRoutes()
+{
+    Route::middleware('admin')
+         ->namespace($this->namespace)
+         ->group(base_path('routes/admin.php'));
+}
+
+
+
+
+
+
+
+
+
