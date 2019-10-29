@@ -14,6 +14,7 @@ RolesAndPermissionsSeeder.php
 
 app/Http/Kernel.php
 
+```php
 protected $routeMiddleware = [
     // ...
     'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
@@ -36,7 +37,7 @@ protected $middlewareGroups = [
         //...
     ],
 ];
-
+```
 
 ###add route
 
@@ -64,11 +65,35 @@ protected function mapAdminRoutes()
 }
 ```
 
+```sh
+npm install @fortawesome/fontawesome-free --save-dev
+```
+
+add sass
+
+```scss
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+```
 
 
+```
+npm install startbootstrap-sb-admin-2 --save-dev
+```
 
+```scss
+@import '~startbootstrap-sb-admin-2/scss/sb-admin-2';
+```
 
+app.js
 
+```js
+require('bootstrap');
+require('startbootstrap-sb-admin-2/js/sb-admin-2');
+
+```
 
 
 
