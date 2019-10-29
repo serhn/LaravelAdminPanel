@@ -23,7 +23,7 @@ protected $routeMiddleware = [
 
 protected $middlewareGroups = [
     'web' => [
-        ....
+        //....
     ],
 
     'admin' => [
@@ -33,7 +33,7 @@ protected $middlewareGroups = [
     ],
 
     'api' => [
-        ...
+        //...
     ],
 ];
 
@@ -42,6 +42,7 @@ protected $middlewareGroups = [
 
 app\Providers\RouteServiceProvider
 
+```php
 public function map()
 {
     $this->mapApiRoutes();
@@ -56,10 +57,12 @@ public function map()
 
 protected function mapAdminRoutes()
 {
-    Route::middleware('admin')
-         ->namespace($this->namespace)
-         ->group(base_path('routes/admin.php'));
+            Route::prefix('admin')
+            ->middleware('admin')
+            ->namespace($this->namespace.'\Admin')
+            ->group(base_path('routes/admin.php'));
 }
+```
 
 
 

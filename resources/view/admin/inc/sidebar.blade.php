@@ -10,14 +10,12 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
-    @if(Auth::user()->hasRole('super-admin'))
     <!-- Nav Item - Tables -->
     <li class="nav-item active">
-        <a class="nav-link" href="/admin/users">
+        <a class="nav-link" href="{{route("users.index")}}">
             <i class="fas fa-fw fa-users"></i>
             <span>Users</span></a>
     </li>
-    @endif
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
