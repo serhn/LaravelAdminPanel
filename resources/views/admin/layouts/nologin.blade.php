@@ -42,7 +42,7 @@
         <div id="wrapper">
 
             <!-- Sidebar -->
-            @include("admin.inc.sidebar")
+            @include("admin::inc.sidebar")
             <!-- End of Sidebar -->
 
             <!-- Content Wrapper -->
@@ -52,14 +52,14 @@
                 <div id="content">
 
                     <!-- Topbar -->
-                    @include("admin.inc.topbar.index")
+                    @include("admin::inc.topbar.index")
 
                     <!-- End of Topbar -->
 
                     <!-- Begin Page Content -->
                     <div class="container-fluid" id="app">
 
-                        {{--@include("admin.inc.table") --}}
+                        {{--@include("admin::inc.table") --}}
                         @yield('content')
                     </div>
                     <!-- /.container-fluid -->
@@ -68,7 +68,7 @@
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                @include("admin.inc.footer")
+                @include("admin::inc.footer")
 
                 <!-- End of Footer -->
 

@@ -6,7 +6,7 @@
     </button>
 
     <!-- Topbar Search -->
-    @include('admin.inc.topbar.search')
+    @include('admin::inc.topbar.search')
     @guest
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -34,7 +34,7 @@
     <ul class="navbar-nav ml-auto">
 
         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-        @include('admin.inc.topbar.searchDropDown')
+        @include('admin::inc.topbar.searchDropDown')
 
 
         <!-- Nav Item - Alerts -->

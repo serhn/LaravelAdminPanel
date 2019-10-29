@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Serh\LaravelAdminPanel\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Serh\LaravelCrud\Traits\CrudAndView;

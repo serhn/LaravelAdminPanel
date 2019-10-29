@@ -2,7 +2,8 @@
     "name": "serh/laravel-admin-panel",
     "description": "SB Admin 2 admin panel bootstrap for Laravel",
     "require": {
-        "spatie/laravel-permission": "^2.38"
+        "spatie/laravel-permission": "^2.38",
+        "serh/laravel-crud": "@dev"
     },
     "license": "MIT",
     "autoload": {
