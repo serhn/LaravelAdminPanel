@@ -23,7 +23,7 @@ class LaravelAdminPanelServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+    { 
         $this->loadViewsFrom(__DIR__ . '/../../resources/view/admin', 'admin');
        /* $this->publishes(
             [
