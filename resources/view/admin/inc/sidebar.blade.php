@@ -8,20 +8,22 @@
         <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
     </a>
 
+
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item {{ \Request::path()."/"==\Request::route()->getPrefix()?'active':''}}">
+        <a class="nav-link" href="/{{\Request::route()->getPrefix()}}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Tables -->
-    <li class="nav-item active">
+    <li class="nav-item {{(\Request::is(['*/users','*/users/*']))?'active':''}}">
         <a class="nav-link" href="{{route("users.index")}}">
             <i class="fas fa-fw fa-users"></i>
             <span>Users</span></a>
-    </li>
-
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
     </li>
 
     <!-- Divider -->
