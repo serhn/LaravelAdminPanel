@@ -1,0 +1,21 @@
+{
+    "name": "serh/laravel-admin-panel",
+    "description": "SB Admin 2 admin panel bootstrap for Laravel",
+    "require": {
+        "spatie/laravel-permission": "^2.38"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Serh\\LaravelAdminPanel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Serh\\LaravelAdminPanel\\LaravelAdminPanelServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
