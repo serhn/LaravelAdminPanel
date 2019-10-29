@@ -52,7 +52,7 @@ class UserController extends Controller
     {//dd(Auth::check());
         
 
-        $this->layout = "admin.layouts.app";
+        $this->layout = "admin::layouts.app";
     }
     public function home()
     {
@@ -67,6 +67,6 @@ class UserController extends Controller
             //dd($user->hasRole('super-admin'));
         }
         # code...
-        return view("admin.index");
+        return view("admin::index");
     }
 }
