@@ -27,7 +27,7 @@ class LaravelAdminPanelServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views/admin', 'admin');
         $this->publishes(
             [
-                __DIR__ . '/../resources/view/admin' => resource_path("views") . "/admin",
+                __DIR__ . '/../resources/views/admin' => resource_path("views") . "/admin",
             ],
             [
                 __DIR__ . '/../routes/admin.php' => base_path("routes") . "/admin.php",
