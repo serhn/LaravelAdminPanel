@@ -1,16 +1,16 @@
 
 
-###install spatie/laravel-permission
+### install spatie/laravel-permission
 
 https://docs.spatie.be/laravel-permission/v3/installation-laravel/
 
 
-###run seed
+### run seed
 
 RolesAndPermissionsSeeder.php
 
 
-###add midelware
+### add midelware
 
 app/Http/Kernel.php
 
@@ -39,7 +39,7 @@ protected $middlewareGroups = [
 ];
 ```
 
-###add route
+### add route
 
 app\Providers\RouteServiceProvider
 
@@ -69,7 +69,7 @@ protected function mapAdminRoutes()
 npm install @fortawesome/fontawesome-free --save-dev
 ```
 
-add sass
+## add sass
 
 ```scss
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
